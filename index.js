@@ -12,6 +12,10 @@ function handleOrientation(event) {
 
     compass.innerHTML = `Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`;
     switch (alpha) {
+        case (alpha > 315 || alpha <= 45):
+            direction.innerHTML = "North";
+            break;
+
         case (alpha > 45 && alpha <= 135):
             direction.innerHTML = "East";
             break;
@@ -25,7 +29,6 @@ function handleOrientation(event) {
             break;
     
         default:
-            direction.innerHTML = "North";
             break;
     }
 }
