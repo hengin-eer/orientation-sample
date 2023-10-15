@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Orientation Sample</title>
+</head>
+
+<body>
+    <h1>Orientation Sample</h1>
+    <p>Device Orientation: <span id="orientation"></span></p>
+
+    <script>
+        const orientation = document.querySelector("#orientation");
+        let alpha = 0;
+        let beta = 0;
+        let gamma = 0;
+
+        function handleOrientation(event) {
+            alpha = event.alpha;
+            beta = event.beta;
+            gamma = event.gamma;
+
+            orientation.innerHTML = `Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`;
+        }
+
+        window.addEventListener("deviceorientation", handleOrientation);
+    </script>
+</body>
+
+</html>
