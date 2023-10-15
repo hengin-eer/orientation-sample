@@ -11,26 +11,10 @@ function handleOrientation(event) {
     gamma = parseInt(event.gamma.toFixed(2));
 
     compass.innerHTML = `Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`;
-    switch (alpha) {
-        case (alpha > 315 <= 360 || 0 > alpha <= 45):
-            direction.innerHTML = "North";
-            break;
-
-        case (alpha > 45 && alpha <= 135):
-            direction.innerHTML = "East";
-            break;
-
-        case (alpha > 135 && alpha <= 225):
-            direction.innerHTML = "South";
-            break;
-
-        case (alpha > 225 && alpha <= 315):
-            direction.innerHTML = "West";
-            break;
-    
-        default:
-            break;
-    }
+    if (alpha > 315 <= 360 || 0 > alpha <= 45) direction.innerHTML = "North";
+    else if (alpha > 45 && alpha <= 135) direction.innerHTML = "East";
+    else if (alpha > 135 && alpha <= 225) direction.innerHTML = "South";
+    else if (alpha > 225 && alpha <= 315) direction.innerHTML = "West";
 }
 
 window.addEventListener("deviceorientation", handleOrientation);
