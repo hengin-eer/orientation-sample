@@ -7,10 +7,30 @@
     <title>Orientation Sample</title>
 </head>
 
+<style>
+    body {
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #compass {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        display: block;
+    }
+</style>
+
 <body>
     <h1>Orientation Sample</h1>
     <p>Direction: <span id="direction"></span></p>
     <p>Device Orientation: <span id="orientation"></span></p>
+
+    <img id="compass" src="./assets/compass.svg" alt="compass">
 
     <script src="./index.js"></script>
     <script>
