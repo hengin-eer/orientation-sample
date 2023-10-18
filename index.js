@@ -7,6 +7,7 @@ let beta = 0;
 let gamma = 0;
 
 function handleOrientation(event) {
+    event.absolute = true;
     alpha = parseInt(event.alpha);
     beta = parseInt(event.beta);
     gamma = parseInt(event.gamma);
@@ -21,4 +22,4 @@ function handleOrientation(event) {
     compass.style.transform = `rotate(${alpha}deg)`;
 }
 
-window.addEventListener("deviceorientation", handleOrientation);
+window.addEventListener("deviceorientationabsolute", handleOrientation);
