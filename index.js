@@ -18,7 +18,7 @@ function handleOrientation(event) {
     else if (alpha > 225 && alpha <= 315) direction.innerHTML = "West";
     else direction.innerHTML = "North";
 
-    compass.style.transform = `rotate(-${alpha}deg)`;
+    compass.style.transform = `rotate(${alpha}deg)`;
 }
 
 window.addEventListener("deviceorientation", handleOrientation);
